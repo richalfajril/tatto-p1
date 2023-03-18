@@ -1,0 +1,99 @@
+div {
+    display: block;
+}
+
+.body {
+    background-color: black;
+}
+
+/* Navbar */
+.navbar {
+    background-blend-mode: screen;
+}
+
+li.nav-item {
+    height: 24px;
+    width: 95px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-style: normal;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+#navbar.container {
+    width: 1120px;
+}
+
+/* Navbar End */
+
+/* Jumbotron */
+.jumbotron {
+    text-align: center;
+    background-image: url(img/bghero.png);
+    background-size: auto;
+    background-position: center;
+    height: 1024px;
+    margin-top: -152px;
+}
+
+div#heading.container {
+    width: 1120px;
+    padding-top: 280px;
+    letter-spacing: 5%;
+}
+
+h1.display-4 {
+    font-family: 'UnifrakturMaguntia', cursive;
+    line-height: 150%;
+    font-size: 72px;
+    color: white;
+    margin-bottom: 24px;
+}
+
+h2#welcome {
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    line-height: 150%;
+    color: #6D4613;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+p#p1 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+    line-height: 150%;
+    color: white;
+    margin-bottom: 80px;
+}
+
+a.btn {
+    background-color: #6D4613;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    text-align: center;
+    text-transform: uppercase;
+    width: 200px;
+    height: 56px;
+    line-height: 150%;
+    padding-top: 16px;
+    letter-spacing: 5%;
+    color: #0E0A07;
+}
+
+/* Jumbotron End */
+
+/* FItur */
+.container#fitur {
+    background-color: #0E0A07;
+    display: -webkit-box;
+    display: block;
+    height: 224px;
+    width: 1120px;
+    margin-top: -112px;
+}
+
+/* FItur end */
