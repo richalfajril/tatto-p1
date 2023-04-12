@@ -8,6 +8,7 @@
 
   <!-- My CSS -->
   <link rel="stylesheet" href="{{asset('/css/style.css')}}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <!-- Boostrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
@@ -50,23 +51,23 @@
               Gallery
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">large</a></li>
-              <li><a class="dropdown-item" href="#">traditional</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><a class="dropdown-item" href="#large">large tatto</a></li>
+              <li><a class="dropdown-item" href="#small">small tatto</a></li>
+              <li><a class="dropdown-item" href="#handpoke">handpoke tatto traditional</a></li>
+              <li><a class="dropdown-item" href="#bodypiercing">body piercing</a></li>
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">contact</a>
+            <a class="nav-link" href="#contact">contact</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Faq</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">find us</a>
+            <a class="nav-link" href="#find">find us</a>
           </li>
           <li class="nav-item" id="cta">
-            <a class="nav-link" href="#">book now</a>
+            <a class="nav-link" href="#booking">book now</a>
           </li>
           
         </ul>
@@ -153,7 +154,7 @@
     <div class="container" id="gallery">
       <h1>our last work</h1>
       <h2>Vegan Tatto Ink</h2>
-      <h3>large tatto</h3>
+      <h3 id="large">large tatto</h3>
       <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
           <div class="card">
@@ -171,7 +172,7 @@
           </div>
         </div>
       </div>
-      <h3>SMALL TATTO</h3>
+      <h3 id="small">SMALL TATTO</h3>
       <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
           <div class="card">
@@ -189,7 +190,7 @@
           </div>
         </div>
       </div>
-      <h3>HANDPOKE TATTO TRADITIONAL</h3>
+      <h3 id="handpoke">HANDPOKE TATTO TRADITIONAL</h3>
       <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
           <div class="card">
@@ -207,7 +208,7 @@
           </div>
         </div>
       </div>
-      <h3>bODY PIERCING</h3>
+      <h3 id="bodypiercing">bODY PIERCING</h3>
       <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
           <div class="card">
@@ -233,39 +234,110 @@
   {{-- Our Gallery end --}}
 
   {{-- Review --}}
-  <div class="container">
-    <div class="container">
-
-    </div>
-  </div>
   {{-- Review end --}}
 
   {{-- Book Now --}}
-  <div id="parallax3" class="jumbotron jumbotron-fluid" style="background-image: url({{asset('paralax/book.png')}})" >
-    <div class="container" id="booking">
-      <div class="container" id="form">
-        <h1>book now</h1>
-        <h2>make an appoinment</h2>
-        <div class="form-floating mb-3 mx-auto">
-          <input type="Text" class="form-control" id="Nama" placeholder="Nama">
-          <label for="floatingPassword">Name</label>
+  <div class="container-fluid" id="booking" style="background-image: url({{asset('paralax/book.png')}})" style="background-size: cover">
+    <div class="container" id="form">
+      <h1>book now</h1>
+      <h2>Make An Appoinment</h2>
+      <form>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="first-name" class="form-label">First name</label>
+            <input type="text" class="form-control" id="first-name" required>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="last-name" class="form-label">Last name</label>
+            <input type="text" class="form-control" id="last-name" required>
+          </div>
         </div>
-        <div class="form-floating mb-3 mx-auto">
-          <input type="email" class="form-control" id="Email" placeholder="name@example.com">
-          <label for="floatingInput">Email address</label>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="email" required>
         </div>
-        <div class="form-floating mb-3 mx-auto">
-          <textarea class="form-control" placeholder="Message" id="floatingTextarea2" style="height: 100px"></textarea>
-          <label for="floatingTextarea2">Message</label>
+        <div class="mb-3">
+          <label for="message" class="form-label">Message</label>
+          <textarea class="form-control" id="message" rows="5" required></textarea>
         </div>
-        <div>
-          <a href="#" class="btn btn-lg" role="button" aria-pressed="true">send</a>
+        <div class="mb-3 mx-auto" id="submit">
+          <button type="submit" class="btn">SUBMIT</button>
         </div>
+      </form>
+    </div>
+  </div>
+  {{-- Book Now --}}
+
+  {{-- Contact --}}
+  <div class="container-fluid" id="contact">
+    <div class="container" id="sosmed">
+      <h1>contact</h1>
+      <h2>For more information or booking, you can contact us here.</h2>
+      <div class="container" id="ikon">
+        <div class="wrapper">
+          <div class="button">
+            <div class="icon">
+                <i class="fab fa-facebook-f"></i>
+            </div>
+            <a href="">
+              <span>Facebook</span>
+            </a>
+          </div>
+          <div class="button">
+            <div class="icon">
+                <i class="fab fa-whatsapp"></i>
+            </div>
+            <a href="">
+              <span>Whatsapp</span>
+            </a>
+          </div>
+          <div class="button">
+            <div class="icon">
+                <i class="fab fa-instagram"></i>
+            </div>
+            <a href="">
+              <span>Instagram</span>
+            </a>
+          </div>
+          <div class="button">
+            <div class="icon">
+                <i class="fab fa-google"></i>
+            </div>
+            <a href="">
+              <span>Google</span>
+            </a>
+          </div>
+          <div class="button">
+            <div class="icon">
+                <i class="fab fa-youtube"></i>
+            </div>
+            <a href="">
+              <span>YouTube</span>
+            </a>
+          </div>
       </div>
     </div>
   </div>
+  {{-- Contact end --}}
 
-  {{-- Book Now --}}
+  {{-- Find Us --}}
+  <div class="container-fluid" id="find" style="background-image: url({{asset('maps/maps.png')}})">
+    <div class="container">
+    </div>
+  </div>
+  {{-- Find Us end --}}
+
+  {{-- Footer --}}
+  <div class="container-fluid" id="footer">
+    <div class="container">
+      <h1>studio location</h1>
+      <h2>Jl. Dewi Sri No.4, Legian, Kec. Kuta, Kabupaten Badung, Bali 80361</h2>
+      <img src="{{asset('logo/Rectangle 57.png')}}" alt="">
+    </div>
+  </div>
+  <footer>© 2023 ThreeFalse. All Right Reserved.</footer>
+  {{-- Footer end --}}
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
   </script>
